@@ -1,0 +1,14 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="MainMenuScript">
+			<method name="nopress"/>
+			<method name="quitpress"/>
+			<method name="yespress"/>
+			<method name="startpress"/>
+		</type>
+		<type fullname="GameOverScript">
+			<method name="exitpress"/>
+			<method name="playagainpress"/>
+		</type>
+	</assembly>
+</linker>
