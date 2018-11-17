@@ -20,6 +20,8 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
+		public AudioSource jumpsound;
+
 		//bool doubleJump = false;
         private void Awake()
         {
@@ -102,6 +104,7 @@ namespace UnityStandardAssets._2D
                 m_Anim.SetBool("Ground", false);
 				m_Rigidbody2D.velocity = new Vector2 (m_Rigidbody2D.velocity.x, 0); 
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+				jumpsound.Play();
 				if (!m_Grounded) {
 				
 					//doubleJump = true; 
