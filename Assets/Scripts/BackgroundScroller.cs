@@ -19,6 +19,5 @@ public class BackgroundScroller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		myMaterial.mainTextureOffset += offset * Time.deltaTime;
-		
 	}
 }
