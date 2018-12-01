@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 55890104}
   - component: {fileID: 55890103}
   - component: {fileID: 55890106}
-  - component: {fileID: 55890105}
   m_Layer: 5
   m_Name: hsbg
   m_TagString: Untagged
@@ -184,24 +183,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 55890101}
   m_CullTransparentMesh: 0
---- !u!95 &55890105
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 55890101}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 258739037682b487380dab556bf0d438, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &55890106
 MonoBehaviour:
   m_ObjectHideFlags: 0
