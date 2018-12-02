@@ -1263,7 +1263,6 @@ GameObject:
   - component: {fileID: 1536032990}
   - component: {fileID: 1536032992}
   - component: {fileID: 1536032991}
-  - component: {fileID: 1536032993}
   m_Layer: 5
   m_Name: Sky
   m_TagString: Untagged
@@ -1323,18 +1322,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1536032989}
   m_CullTransparentMesh: 0
---- !u!114 &1536032993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1536032989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30a8627f994971a438b7cea950b8a8ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backgroundScrollSpeed: 0.5
 --- !u!1 &1566648290
 GameObject:
   m_ObjectHideFlags: 0
