@@ -20,9 +20,9 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
-		public AudioSource jumpsound;
+        public AudioSource jumpsound;
 
-		//bool doubleJump = false;
+        bool doubleJump = false;
         private void Awake()
         {
             // Setting up references.
@@ -49,10 +49,10 @@ namespace UnityStandardAssets._2D
 
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
-			if(m_Grounded){
+            if (m_Grounded) {
 
-				//doubleJump = false;
-			}
+                doubleJump = false;
+            }
         }
 
 
@@ -75,13 +75,13 @@ namespace UnityStandardAssets._2D
             if (m_Grounded || m_AirControl)
             {
                 // Reduce the speed if crouching by the crouchSpeed multiplier
-                move = (crouch ? move*m_CrouchSpeed : move);
+                move = (crouch ? move * m_CrouchSpeed : move);
 
                 // The Speed animator parameter is set to the absolute value of the horizontal input.
                 m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
                 // Move the character
-                m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
+                m_Rigidbody2D.velocity = new Vector2(move * m_MaxSpeed, m_Rigidbody2D.velocity.y);
 
                 // If the input is moving the player right and the player is facing left...
                 if (move > 0 && !m_FacingRight)
@@ -89,7 +89,7 @@ namespace UnityStandardAssets._2D
                     // ... flip the player.
                     Flip();
                 }
-                    // Otherwise if the input is moving the player left and the player is facing right...
+                // Otherwise if the input is moving the player left and the player is facing right...
                 else if (move < 0 && m_FacingRight)
                 {
                     // ... flip the player.
@@ -97,7 +97,7 @@ namespace UnityStandardAssets._2D
                 }
             }
             // If the player should jump...
-			if ((m_Grounded /*|| !doubleJump*/) && jump && (m_Anim.GetBool("Ground")/*|| !doubleJump*/) )
+            if ((m_Grounded || !doubleJump) && jump && (m_Anim.GetBool("Ground") || !doubleJump ) )
             {
                 // Add a vertical force to the player.
                 m_Grounded = false;
@@ -107,7 +107,7 @@ namespace UnityStandardAssets._2D
 				jumpsound.Play();
 				if (!m_Grounded) {
 				
-					//doubleJump = true; 
+					doubleJump = true; 
 				
 				}
             }
